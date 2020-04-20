@@ -205,3 +205,50 @@ How to create a keyspace:
 	Create index create an index on the column specified by user.
 	
 	Create index IndexName on keyspaceName.Tablename(ColumnName);
+	
+	create index DeptIndex on University.Student(dept);
+	select * from Univerity.Student Where dept='CSE';
+
+	Drop index IF EXITS KeyspaceName.IndexName;
+	Drop index IF EXITS University.DeptIndex;
+	
+Cassandra Data Types:
+	
+	Boolean 		True/False
+	Float			32-bit floating point
+	Doble			64-bit flaoting point
+	Inet			32 bit signed interget
+	List			Collection of elements
+	Map			Json style collection of elements
+	set 			collection of elements
+	text			UTF-8 encoded strings
+	timestamp		Id generated with data plus time
+	
+	Cassandra provices functionality by which data canbe automatically expired.
+	During data insertion you have to spicify 'ttl' value in seconds.
+	when the data expired it is marked as tombstone.
+	
+	insert into University.Student(rollno,name,dept,semester) values(3, 'ashok','CE',7) using ttl 100;
+
+
+Cassandra Collection:
+	
+
+	cassandra collection cannot store data more then 64KB. if you store more then 64KB data then the remaining data will be lost.
+	
+	Create table University.Teacher
+	(
+	id int,
+	Name text,
+	Email set<text>,
+	Primary key(id)
+	);
+
+	insert into University.Teacher(id,name,email) values(1, 'ashok',{'ashok@gmail.com','text@gmail.com'});
+
+     Cassandra Map: 
+	The map is a collection type that is used to store the value pairs. as its name implies that it maps one thing to another.
+	if you want to save course name with its prerequisite course name, map collection can be used.
+	
+	insert into Univeristy>course(id,prereq) values(1,{'DataScience':'Database', 'NuralNetwork':'AI'});
+

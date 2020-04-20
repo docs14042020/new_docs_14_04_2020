@@ -1,1 +1,10 @@
-Lines has to come up... working on it
+Inforamatic: 
+		1. Informatic Design 
+		2. Infornatic Repo
+		3. Informatic Power Center
+		4. Informatic Workflow Manager	
+
+	Informatic Repo: You can develop two repos to share metashare.
+		1. Global Repository
+		2. Local Repository
+		
