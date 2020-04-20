@@ -42,5 +42,19 @@ Inforamatic:
 				Workflow Manager : Create a work flow
 				Workflow Monitor : Monitor the execution of the workflow
 				Data Visulation : Load the Outputdata from the data warehouse
-				
+	** Donot use white spaces.	
 	
+	Powercenter Repos : 
+	
+				
+	PowerCenter Designer : 
+
+	to load any data you have to at the source analasis click <source> <import database>
+	at the source you have to select the source of the database.
+	after that select the table which ever you want.
+By default the look point of file is <informattic><version><server><inf0_shares><src> 
+
+	Mapping: Create
+	 Naming convention: m_<our wish>
+	  basically 2 table willb created the second one is <source tansformation table>
+	  create a transformation table. <expolore the options>
