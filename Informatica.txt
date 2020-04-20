@@ -58,3 +58,9 @@ By default the look point of file is <informattic><version><server><inf0_shares>
 	 Naming convention: m_<our wish>
 	  basically 2 table willb created the second one is <source tansformation table>
 	  create a transformation table. <expolore the options>
+	 
+	 connect the source transformation with new transformation created.
+	expression editor:  port number, properties, 
+	1.Filter transformation 
+	2.Join transformation  (at least one column should match)
+	3.Target definition: 
