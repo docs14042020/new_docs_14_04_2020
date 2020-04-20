@@ -162,7 +162,7 @@ spec:
 		 
 14. If you delete the pods with delete command $kubectl delete po <pods name>
     This will automatically create another pods because In some cases it could also be running due to a job or daemonset. 
-	Check the following and run their appropriate delete command.
+	Check the following and run their appropriate delete command..
      
 	$kubectl get daemonsets.app --all-namespaces
     $kubectl get deployments --all-namespaces

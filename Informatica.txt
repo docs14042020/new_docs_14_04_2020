@@ -1,10 +1,39 @@
-Inforamatic: 
-		1. Informatic Design 
-		2. Infornatic Repo
-		3. Informatic Power Center
-		4. Informatic Workflow Manager	
+ETL (Extract, Transform, Load)
+Inforamatic:
+		1. Informatic Design.
+		2. Infornatic Repo.
+		3. Informatic Power Center.
+		4. Informatic Workflow Manager.
 
 	Informatic Repo: You can develop two repos to share metashare.
-		1. Global Repository
-		2. Local Repository
+			 Create a folder in the Repository Manager to store the metadata you create in the lessons.
+		1. Global Repository.
+		2. Local Repository.
+	Domain configuration: 
+		1. Domain configuration.
+		2. Ussage.
+		3. Users and groups.
+		4. Privilege and roles.
+	Before Begin: 
+		1. Create user and group
+		2. add source definitatin to the repo
+		3. Create targets and add their definitions to the repo
+		4. map data between source and target
+		5. Instruct the integration service to write data to target 
+		6. Monitor the integration service as it writes data to targets
+	
+	Informatic Design: 
+	        Create the source and the target definitions. Create mappings that contain transformation 
+	        instructions for the PowerCenter Integration Service.
+
+    		Source Analyzer. Import or create source definitions.
+		    Target Designer. Import or create target definitions. You also create tables in the target database based on the target definitions.
+	        Mapping Designer. Create mappings that the PowerCenter Integration Service uses to extract, transform, and load data. 
+	
+		Workflow Manager. Create and run the workflows and the tasks in the Workflow Manager. 
+			  A workflow is a set of instructions that describes how and when to run tasks to extract, transform, and load data.
+
+        Workflow Monitor. Monitor scheduled and running workflows for each Integration Service. 
+	
 		
+	

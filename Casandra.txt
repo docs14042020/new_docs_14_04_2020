@@ -251,4 +251,5 @@ Cassandra Collection:
 	if you want to save course name with its prerequisite course name, map collection can be used.
 	
 	insert into Univeristy>course(id,prereq) values(1,{'DataScience':'Database', 'NuralNetwork':'AI'});
+ ne
 
