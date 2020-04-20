@@ -61,6 +61,11 @@ By default the look point of file is <informattic><version><server><inf0_shares>
 	 
 	 connect the source transformation with new transformation created.
 	expression editor:  port number, properties, 
-	1.Filter transformation 
-	2.Join transformation  (at least one column should match)
-	3.Target definition: 
+	1. Filter transformation 
+	2. Join transformation:  (at least one column should match)
+	3. Target definition: 
+	
+	Target definitation: 
+	naming convention : TGT_<NAME> 
+	it is used to save the table into the database
+	
