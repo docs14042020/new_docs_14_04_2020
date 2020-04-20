@@ -36,4 +36,11 @@ Inforamatic:
         Workflow Monitor. Monitor scheduled and running workflows for each Integration Service. 
 	
 		
+	The workflow:
+	
+				Designer  : Load and join source data
+				Workflow Manager : Create a work flow
+				Workflow Monitor : Monitor the execution of the workflow
+				Data Visulation : Load the Outputdata from the data warehouse
+				
 	
