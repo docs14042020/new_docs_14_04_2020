@@ -1,0 +1,41 @@
+Do not change defaults.ini grafana defaults are stored in this file
+depending on your os make changes in either custom.ini or grafana.ini
+Default configuration from $WORKING_DIR/conf/defaults.ini
+Custom configuration from $WORKING_DIR/conf/custom.ini
+The custom configuration file path can be overridden using the --config parameter
+
+if you installed the grafana through rpm and deb then the dafault path is /etc/grafana/grafana.ini
+
+Semicolons (the ; char) are the standard way to comment out lines in a .ini
+
+
+Logs: 
+		path where the grafana store the logs 
+		By default, the log file should be located at /usr/local/var/log/grafana/grafana.log
+
+Http_port: 
+			te dafault port is 3000. to use custom port grafana binary permission should be given
+				$sudo setcap 'cap_net_bind_service=+ep' /usr/sbin/grafana-server
+	
+	another way is to put a webserver like ngnix or apache in front of grafana and have them proxy request to grafana
+	
+enable_gzip: 
+		set this option to 'true' to enable HTTP compression, this can improve trasfer speed and bandwidth utilization. by default it is false.
+	
+Database: 
+		Grafana needs a database to store user and database by dafault it is configured to use sqlite3
+		
+		
+Users: 
+		allow_sign_up: Set to false to prohibit users from being able to sign up / create user accounts.
+		allow_org_create: Set to false to prohibit users from creating new organizations. Defaults to false
+		
+Dashboard: 
+	Versions_to_keep: Number dashboard versions to keep. Dafault 20 min is 1
+	
+	
+
+Security:
+		 You can configure the grafana to allow certain IP address or hostnames to be used as data source.
+		 
+	
