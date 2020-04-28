@@ -1,0 +1,66 @@
+
+INSTALL GITLAB:
+
+sudo apt-get update
+
+sudo apt-get install -y curl openssh-server ca-certificates
+
+sudo apt-get install -y postfix (for notification emails) 
+
+curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash (add GitLab package)
+
+sudo EXTERNAL_URL="http://35.192.87.229" apt-get install gitlab-ee (connect to instance)
+
+
+
+
+Default token: /var/run/secrets/kubernetes.io/serviceaccount/token
+
+
+HELM (A package manager in Gitlab for Kubernetes)
+
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
+chmod 700 get_helm.sh
+./get_helm.sh
+
+
+http://35.192.87.229/root/learningdevops/clusters (claydesk7)
+http://35.192.87.229/help/user/project/clusters/index.md#installing-applications (claydesk5)
+
+USEFUL LINKS:
+https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/#accessing-the-api-from-a-pod (for token)
+
+INSTALL & REGISTER RUNNER IN GITLAB:
+
+1. Download Binaries
+sudo wget -O /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64
+2. Give it permission to execute
+sudo chmod +x /usr/local/bin/gitlab-runner
+3. Install Docker (optional)
+curl -sSL https://get.docker.com/ | sh
+4. Create GitLab CI User
+sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
+5. Install and Run as a Service
+sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+sudo gitlab-runner start
+
+REGISTER RUNNER GNU/Linux:
+
+1. Run the command
+sudo gitlab-runner register
+2. Enter GitLab instance URL 
+Please enter the gitlab-ci coordinator URL (http://your ip)
+3. Enter Token from GitLan Runner Page (Go to Settings -> CI/CD ->Runner Settings -> Setup a specific runner manually
+zsNPdSbgSgbTwfKb7S9d
+4. Enter Description for Runner (Give any name)
+Please enter the gitlab-ci description for this runner
+[hostname] my-runner
+5. Enter tags (Enter to Skip), otherwise enter
+Please enter the gitlab-ci tags for this runner (comma separated):
+my-tag,another-tag
+6. Enter Runner Executor
+Please enter the executor: ssh, docker+machine, docker-ssh+machine, kubernetes, docker, parallels, virtualbox, docker-ssh, shell:
+docker
+7. If you chose Docker as your executor, you'll be asked for the default image to be used for projects that do not define one in .gitlab-ci.yml
+Please enter the Docker image (eg. ruby:2.1):
+alpine:latest
